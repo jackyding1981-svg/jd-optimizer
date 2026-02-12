@@ -35,13 +35,41 @@ jd-optimizer/
     └── jd-analysis-report.md             # 分析报告模板
 ```
 
-## 使用方式
+## 部署与运行
 
-1. 上传一份传统 JD 文件（支持 PDF、Word、图片等格式）
-2. 触发 `/jd-optimizer` 技能
-3. 系统将自动执行三步工作流，最终输出：
-   - **JD 分析报告**：包含结构化分析、质量评分、市场趋势洞察和优化建议
-   - **优化后的新 JD**：基于市场最佳实践重构的专业岗位描述
+### 环境要求
+
+- Manus AI Agent 运行环境
+- 已安装 `git`
+
+### 部署步骤
+
+1. **克隆仓库**：
+   ```bash
+   git clone https://github.com/jackyding1981-svg/jd-optimizer.git
+   ```
+
+2. **移动到技能目录**：
+   将克隆的 `jd-optimizer` 文件夹移动到 Manus AI Agent 的技能目录（通常是 `/home/ubuntu/skills/`）。
+   ```bash
+   mv jd-optimizer /home/ubuntu/skills/
+   ```
+
+3. **验证安装**：
+   在 Manus AI Agent 中，通过 `/skill-finder` 或类似命令检查 `jd-optimizer` 技能是否已被识别。
+
+### 运行方式
+
+1. **上传 JD 文件**：
+   在 Manus AI Agent 的聊天界面中，上传一份您需要优化的传统 JD 文件（支持 PDF、Word、图片等格式）。
+
+2. **触发技能**：
+   在上传文件后，发送消息 `/jd-optimizer` 来手动触发技能。
+
+3. **查看结果**：
+   系统将自动执行三步工作流，并最终交付两个核心文件：
+   - **JD 分析报告** (`jd-analysis-report.md`)：包含对原始 JD 的全面诊断和市场洞察。
+   - **优化后的新 JD** (`optimized-jd.md`)：一份可以直接使用的、专业且现代化的新版 JD。
 
 ## 交付成果
 
